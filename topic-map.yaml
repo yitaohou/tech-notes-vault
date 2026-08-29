@@ -1,0 +1,487 @@
+topics:
+  ai:
+    subtopics:
+      ai-agent-architecture:
+        definition: agent 的定义、工具、记忆、规划、multi-agent 协作与 agent harness（持久记忆、目标导向循环、生成校验分离）等架构设计模式。
+        related:
+        - ai-coding-agents
+        - ai-self-improving-agents
+        - ai-safety-security
+        - ai-model-selection-deployment
+        - ai-prompt-engineering
+        title: Agent 架构与 Harness 设计
+      ai-coding-agents:
+        definition: Claude Code、Codex、Cursor 等编码 agent 的工具集、hooks、skill 设计、自动化循环及
+          spec/TDD 等结构化工作流实践。
+        related:
+        - ai-agent-architecture
+        - ai-prompt-engineering
+        - frontend-ai-coding-assistants
+        - career-industry-ai-engineering-shift
+        - ai-second-brain-tools
+        title: AI 编码 Agent 与工作流
+      ai-engineering-fundamentals:
+        definition: training 与 inference 的区分、AI accelerator 芯片及模型编排（orchestrator）等
+          AI engineering 基础概念。
+        related:
+        - ai-llm-architecture
+        - ai-inference-optimization
+        - ai-model-selection-deployment
+        title: AI Engineering 基础设施
+      ai-evaluation:
+        definition: LLM-as-a-judge、benchmark 设计与饱和、reference-based 评估、observability
+          追踪及产品反馈时机的体验权衡。
+        related:
+        - ai-safety-security
+        - ai-model-selection-deployment
+        - system-design-observability
+        - ai-fine-tuning
+        title: AI 评估与反馈
+      ai-fine-tuning:
+        definition: 全量/部分微调、LoRA 等 PEFT 方法、超参数、灾难性遗忘、RLHF 等偏好对齐方法与训练范式选择。
+        related:
+        - ai-training-data
+        - ai-model-selection-deployment
+        - ai-inference-optimization
+        - ai-llm-architecture
+        title: Fine-tuning 与训练范式
+      ai-inference-optimization:
+        definition: 自回归生成瓶颈、continuous/dynamic batching、quantization、distillation、prefill/decode
+          分离等 LLM 推理服务优化技术。
+        related:
+        - ai-llm-architecture
+        - ai-model-selection-deployment
+        - ai-fine-tuning
+        - ai-engineering-fundamentals
+        title: 推理性能优化
+      ai-llm-architecture:
+        definition: Transformer 的 attention、embedding、encoder-decoder 结构及 scaling
+          law 等基础模型理论。
+        related:
+        - ai-inference-optimization
+        - ai-fine-tuning
+        - ai-training-data
+        title: LLM/Transformer 架构基础
+      ai-model-selection-deployment:
+        definition: 在性能、成本、隐私与许可证间权衡选择 foundation model，涵盖 hosting vs API、模型合并（merging）与请求路由/gateway
+          机制。
+        related:
+        - ai-inference-optimization
+        - ai-engineering-fundamentals
+        - career-industry-ai-business-strategy
+        - ai-evaluation
+        title: 模型选型、部署与路由
+      ai-prompt-engineering:
+        definition: 系统提示词与上下文管理技术，包括 chain-of-thought、指令清晰化、跨会话记忆缺失问题与自动化 prompt 优化工具。
+        related:
+        - ai-coding-agents
+        - ai-agent-architecture
+        - ai-evaluation
+        title: Prompt Engineering & Context Engineering
+      ai-rag:
+        definition: 检索增强生成相关技术，包括向量近似搜索（ANN）、embedding、chunking 策略与 context rot 现象。
+        related:
+        - backend-databases
+        - ai-agent-architecture
+        - ai-prompt-engineering
+        - ai-training-data
+        title: RAG 与向量检索
+      ai-safety-security:
+        definition: prompt injection/extraction 攻击、output guardrails、policy check
+          及古德哈特定律等目标失真与安全护栏问题。
+        related:
+        - ai-evaluation
+        - ai-agent-architecture
+        - backend-security
+        - system-design-api-gateway-security
+        title: AI Safety & Security
+      ai-second-brain-tools:
+        definition: 以 Obsidian 等工具结合 AI agent 构建个人知识管理系统（second brain）的实践与插件生态。
+        related:
+        - ai-agent-architecture
+        - ai-prompt-engineering
+        - career-industry-continuous-learning
+        title: AI 第二大脑与生产力工具
+      ai-self-improving-agents:
+        definition: 通过种群演化、父代选择等机制让 agent/harness 自我优化的系统，如 Darwin Gödel Machine、AlphaEvolve，涉及
+          reward hacking 与 diversity collapse 风险。
+        related:
+        - ai-agent-architecture
+        - ai-evaluation
+        - ai-safety-security
+        - ai-fine-tuning
+        title: 自我改进与进化式 Agent
+      ai-training-data:
+        definition: 训练/评估数据的采集、处理与合成，data contamination、data flywheel、scaling law
+          与收益递减等数据工程议题。
+        related:
+        - ai-fine-tuning
+        - ai-rag
+        - ai-llm-architecture
+        title: 训练数据与数据工程
+    title: AI
+  backend:
+    subtopics:
+      backend-api-design:
+        definition: API 设计原则（一致性、命名、文档化）、全生命周期管理、REST 资源建模、过滤排序分页，及 HTTP 协议、状态码、幂等性等基础知识。
+        related:
+        - backend-graphql
+        - backend-grpc
+        - system-design-api-design
+        title: API 设计与 REST/HTTP
+      backend-authentication-authorization:
+        definition: token-based authentication、session/cookie、RBAC、SSO、SAML 及 401
+          状态码等认证授权机制。
+        related:
+        - system-design-authentication-authorization
+        - backend-security
+        - system-design-api-gateway-security
+        title: 认证与授权
+      backend-code-quality-design:
+        definition: 代码坏味道、重复代码、圈复杂度、feature envy、deep module、DRY principle 等发现设计问题的原则与指标。
+        related:
+        - frontend-code-quality-tooling
+        - career-industry-engineering-practices
+        - backend-service-architecture-patterns
+        title: 代码质量与设计原则
+      backend-containerization:
+        definition: Docker 容器化技术：image 结构、Dockerfile、docker-compose 多容器编排及环境一致性。
+        related:
+        - system-design-microservices-architecture
+        - backend-service-architecture-patterns
+        title: 容器化
+      backend-databases:
+        definition: 关系型/图数据库等类型选型、SQL 表结构与 join 操作，以及关系型数据库事务需遵循的 ACID 特性。
+        related:
+        - system-design-data-architecture
+        - ai-rag
+        - backend-code-quality-design
+        title: 数据库类型与事务
+      backend-file-upload:
+        definition: 通过 presigned URL 实现客户端直传对象存储的文件上传设计，涉及鉴权、有效期与大小限制。
+        related:
+        - system-design-file-storage
+        - backend-security
+        title: 文件上传与 Presigned URL
+      backend-graphql:
+        definition: GraphQL 查询语言及其设计实践：query/mutation/subscription、schema 契约与演进、缓存、错误处理与模块化。
+        related:
+        - backend-api-design
+        - system-design-data-architecture
+        title: GraphQL
+      backend-grpc:
+        definition: 基于 HTTP/2 与 protocol buffers 的 gRPC 远程过程调用框架，涵盖 proto 定义、流式通信及微服务间高性能应用场景。
+        related:
+        - backend-api-design
+        - backend-service-architecture-patterns
+        - system-design-microservices-architecture
+        title: gRPC
+      backend-languages-runtimes:
+        definition: 后端编程语言与运行时机制，如 Rust 的 ownership、borrowing、borrow checker 与 Cargo/crate
+          包管理。
+        related:
+        - backend-memory-management
+        - frontend-webassembly
+        title: 后端语言与运行时（Rust 等）
+      backend-memory-management:
+        definition: 程序运行时内存区域（heap/stack memory）的特性与变量可变性语义等基础概念。
+        related:
+        - backend-languages-runtimes
+        - frontend-javascript-runtime
+        title: 内存管理基础
+      backend-messaging-queues:
+        definition: AMQP 等消息队列协议与 producer-consumer 模式、dead letter queue 告警、事件 fan-out
+          与指数退避重试。
+        related:
+        - system-design-communication-patterns
+        - backend-service-architecture-patterns
+        title: 消息队列与可靠性
+      backend-networking-protocols:
+        definition: TCP/UDP 等传输层协议的工作原理、握手过程及选型标准。
+        related:
+        - system-design-networking
+        - backend-service-architecture-patterns
+        title: 网络协议
+      backend-security:
+        definition: 参数化查询/ORM 防注入、私钥签名 token、DDoS/botnet 绕过限流手段、digest authentication
+          与执行超时限制。
+        related:
+        - backend-authentication-authorization
+        - ai-safety-security
+        - system-design-api-gateway-security
+        title: 安全防护
+      backend-service-architecture-patterns:
+        definition: 服务端状态与数据耦合方式（stateful/stateless）、服务间同步调用风险等架构决策模式。
+        related:
+        - system-design-microservices-architecture
+        - backend-grpc
+        - backend-containerization
+        title: 服务架构模式
+    title: Backend
+  career-industry:
+    subtopics:
+      career-industry-ai-business-strategy:
+        definition: AI 原生服务对传统服务业的替代、市场规模测算、copilot 模式、按算力计费及识别真正 AI 原生公司的判断信号。
+        related:
+        - ai-model-selection-deployment
+        - career-industry-ai-startup-founders
+        - career-industry-startup-strategy
+        title: AI 创业与商业模式
+      career-industry-ai-engineering-shift:
+        definition: AI coding agent 普及后工程师角色、定价趋势与前端等职业发展的应对策略，如 vibe coding、vertically
+          integrated engineer。
+        related:
+        - ai-coding-agents
+        - frontend-ai-coding-assistants
+        - career-industry-continuous-learning
+        title: AI 时代的工程职业变迁
+      career-industry-ai-startup-founders:
+        definition: YC 等机构总结的优秀 AI 创业公司创始人应具备的行业可信度与对前沿模型能力的深刻理解。
+        related:
+        - career-industry-ai-business-strategy
+        - career-industry-startup-strategy
+        title: AI 创业者特质
+      career-industry-continuous-learning:
+        definition: AI 快速迭代背景下专业能力与领域专精的重要性，以及个人知识资产积累与知识系统构建的理念实践。
+        related:
+        - career-industry-ai-engineering-shift
+        - ai-second-brain-tools
+        title: AI 时代的持续学习
+      career-industry-engineering-practices:
+        definition: SOLID 原则、代码坏味道、TDD、测试金字塔、静态代码质量度量等通用软件工程实践。
+        related:
+        - backend-code-quality-design
+        - frontend-code-quality-tooling
+        - career-industry-team-org
+        title: 软件工程实践与代码质量
+      career-industry-interview-prep:
+        definition: 面试准备资源与工程师应根据自身所处系统规模优先学习技能的判断原则。
+        related:
+        - system-design-interview-methodology
+        - career-industry-engineering-practices
+        title: 求职与技能准备
+      career-industry-startup-strategy:
+        definition: 评估创业方向护城河及能否抵御模型能力进化冲击的判断准则，以及过早签约试点客户等早期执行常见陷阱。
+        related:
+        - career-industry-ai-business-strategy
+        - career-industry-ai-startup-founders
+        title: 创业策略与护城河
+      career-industry-team-org:
+        definition: 团队规模与组织设计原则，如 two-pizza team 规则。
+        related:
+        - frontend-architecture
+        - career-industry-engineering-practices
+        title: 团队组织原则
+      career-industry-thought-leaders:
+        definition: 软件工程领域具有权威影响力的知名专家与作家。
+        related:
+        - career-industry-engineering-practices
+        - career-industry-continuous-learning
+        title: 行业知名人物
+    title: Career & Industry
+  frontend:
+    subtopics:
+      frontend-accessibility:
+        definition: Web 可访问性实现技巧，如使用 ARIA label 弥补语义化标签不足的问题。
+        related:
+        - frontend-react-component-design
+        - frontend-css-styling
+        - frontend-ai-coding-assistants
+        title: 前端可访问性
+      frontend-ai-coding-assistants:
+        definition: AI coding agent 在前端开发中的典型行为模式与反模式，如硬编码样式破坏响应式设计、组件臃肿及可访问性/测试自动化权衡。
+        related:
+        - ai-coding-agents
+        - frontend-code-quality-tooling
+        - frontend-accessibility
+        - career-industry-ai-engineering-shift
+        title: AI 辅助前端编码
+      frontend-architecture:
+        definition: 前端应用从 monolith 到拆分的架构演进、bundle splitting、micro-frontend、面向接口编程与
+          feature/platform team 划分。
+        related:
+        - frontend-rendering-strategies
+        - frontend-react-component-design
+        - backend-service-architecture-patterns
+        - career-industry-team-org
+        title: 前端架构与团队协作
+      frontend-code-quality-tooling:
+        definition: 前端测试边界（unit/integration test）的界定与静态分析工具检测未使用文件等代码质量实践。
+        related:
+        - backend-code-quality-design
+        - frontend-javascript-runtime
+        - career-industry-engineering-practices
+        title: 前端代码质量与测试工具
+      frontend-css-styling:
+        definition: CSS 样式方法（atomic CSS）、box model、浏览器 reflow，以及响应式布局与 rem/em 等相对单位的使用规范。
+        related:
+        - frontend-design-systems
+        - frontend-performance-optimization
+        - frontend-accessibility
+        title: CSS 样式与响应式设计
+      frontend-design-systems:
+        definition: design token、design system 组件体系及 AI 时代下 design-to-code 工作流的变化。
+        related:
+        - frontend-css-styling
+        - frontend-react-component-design
+        - ai-coding-agents
+        title: 设计系统
+      frontend-javascript-runtime:
+        definition: JS 引擎与浏览器运行时的调用栈、event loop、垃圾回收可达性判断，以及 Map/WeakMap 等内置数据结构的内存特性。
+        related:
+        - frontend-performance-optimization
+        - backend-memory-management
+        - frontend-code-quality-tooling
+        title: JavaScript 运行时与内存管理
+      frontend-performance-optimization:
+        definition: 关键渲染路径、Core Web Vitals、主线程与合成线程等页面加载与交互响应性能的诊断与优化手段。
+        related:
+        - frontend-rendering-strategies
+        - frontend-react-performance
+        - frontend-javascript-runtime
+        title: 前端性能优化
+      frontend-react-component-design:
+        definition: React 组件的拆分提取、逻辑抽离、组合模式，以及 Storybook 等组件开发展示与协作工具。
+        related:
+        - frontend-accessibility
+        - frontend-react-performance
+        - frontend-design-systems
+        - frontend-architecture
+        title: React 组件设计与工具链
+      frontend-react-performance:
+        definition: React 应用中通过 useMemo/useCallback 等 hooks 减少不必要重渲染、控制 bundle 体积的性能优化手段。
+        related:
+        - frontend-react-component-design
+        - frontend-performance-optimization
+        - frontend-state-management
+        title: React 性能优化
+      frontend-rendering-strategies:
+        definition: SSR、SSG、CSR、React Server Components 及 edge SSR 等减少客户端 JS 负担、提升加载速度的渲染架构方案。
+        related:
+        - frontend-performance-optimization
+        - frontend-architecture
+        - system-design-scalability
+        title: 渲染架构策略（SSR/SSG/RSC）
+      frontend-state-management:
+        definition: 前端 state 架构原则，如单一数据源、state colocation、essential state，避免冗余状态导致的性能问题。
+        related:
+        - frontend-react-performance
+        - frontend-architecture
+        title: 前端状态管理
+      frontend-typescript:
+        definition: TypeScript 在大型前端项目中的模块边界管理与面向接口编程等工程实践。
+        related:
+        - frontend-architecture
+        - backend-code-quality-design
+        title: TypeScript 工程实践
+      frontend-ui-ux-design:
+        definition: 界面一致性对认知负荷的影响，以及 LLM 聊天时代传统 UI 存在价值的讨论。
+        related:
+        - frontend-design-systems
+        - frontend-accessibility
+        - ai-coding-agents
+        title: UI/UX 设计原则
+      frontend-webassembly:
+        definition: 可编译为 WebAssembly 的语言与工具链，如语法类似 TypeScript 的 AssemblyScript。
+        related:
+        - frontend-performance-optimization
+        - backend-languages-runtimes
+        title: WebAssembly
+    title: Frontend
+  system-design:
+    subtopics:
+      system-design-api-design:
+        definition: REST/GraphQL/gRPC 协议选型、资源建模、版本管理、payload 精简、排序参数等 API 设计取舍。
+        related:
+        - backend-api-design
+        - system-design-api-gateway-security
+        - system-design-microservices-architecture
+        title: API 设计原则
+      system-design-api-gateway-security:
+        definition: API Gateway 的认证校验、请求路由与角色分层，以及 VPC/VPN/WAF、XSS 防护与限流（rate limiting）等安全机制。
+        related:
+        - system-design-authentication-authorization
+        - backend-security
+        - ai-safety-security
+        title: API Gateway 与安全
+      system-design-architecture-fundamentals:
+        definition: 系统架构设计流程、权衡分析、架构漂移、blast radius 及 Conway's Law 等架构思维基础。
+        related:
+        - system-design-microservices-architecture
+        - system-design-scalability
+        title: 架构设计方法论
+      system-design-authentication-authorization:
+        definition: authentication 与 authorization 的概念区分，涵盖 API key、basic auth、bearer
+          token、JWT、access/refresh token、ACL 等实现方式。
+        related:
+        - backend-authentication-authorization
+        - system-design-api-gateway-security
+        title: 认证与授权
+      system-design-caching-edge:
+        definition: 缓存模式（cache-aside、eviction）、数据库主从复制、CDN 边缘分发及 edge SSR、edge 数据库副本等边缘计算架构。
+        related:
+        - system-design-scalability
+        - system-design-networking
+        - frontend-rendering-strategies
+        title: 缓存、CDN 与边缘计算
+      system-design-code-execution-platform:
+        definition: 以 LeetCode 为例的在线判题系统设计，涵盖代码提交隔离、沙箱执行、多语言路由与实时排行榜。
+        related:
+        - system-design-interview-methodology
+        - backend-security
+        title: 在线代码执行/判题平台设计
+      system-design-communication-patterns:
+        definition: 消息 broker 的高可用、持久化与重投递机制，以及 polling/WebSocket/SSE 等实时通信方案的设计取舍。
+        related:
+        - backend-messaging-queues
+        - system-design-microservices-architecture
+        title: 消息队列与实时通信模式
+      system-design-data-architecture:
+        definition: 关系型、NoSQL（wide-column 等）、向量数据库的选型依据，partition key/索引设计及服务端与数据库职责分离原则。
+        related:
+        - backend-databases
+        - ai-rag
+        - system-design-file-storage
+        title: 数据存储架构决策
+      system-design-file-storage:
+        definition: 文件上传系统中文件内容与元数据分离存储，object storage 与关系型数据库配合的请求流程与表结构设计。
+        related:
+        - backend-file-upload
+        - system-design-data-architecture
+        title: 文件存储架构
+      system-design-interview-methodology:
+        definition: 梳理 functional requirements、限定范围、假设规模、识别核心实体等系统设计面试标准方法步骤。
+        related:
+        - system-design-architecture-fundamentals
+        - system-design-code-execution-platform
+        - career-industry-interview-prep
+        title: 系统设计面试方法论
+      system-design-microservices-architecture:
+        definition: 微服务服务边界划分、backend-for-frontend（BFF）、monorepo、worker pull、事件驱动等分布式模式及
+          serverless 部署方案。
+        related:
+        - backend-service-architecture-patterns
+        - system-design-architecture-fundamentals
+        - system-design-communication-patterns
+        title: 微服务与分布式架构模式
+      system-design-networking:
+        definition: DNS 域名解析、TCP/UDP 与 WebSocket 握手机制，及 F5/HAProxy 等硬件负载均衡器。
+        related:
+        - system-design-caching-edge
+        - backend-networking-protocols
+        - system-design-scalability
+        title: 网络与负载均衡基础设施
+      system-design-observability:
+        definition: 系统可观测性的核心原则与关键指标，如日志记录黄金法则、MTTD/MTTR/CFR。
+        related:
+        - system-design-scalability
+        - ai-evaluation
+        title: 可观测性
+      system-design-scalability:
+        definition: CAP theorem 下可用性与一致性的取舍、水平/垂直扩展、负载均衡算法、autoscaling、容量规划与健康监控自愈机制。
+        related:
+        - system-design-caching-edge
+        - system-design-microservices-architecture
+        - system-design-observability
+        title: 可扩展性、可用性与容量规划
+    title: System Design
