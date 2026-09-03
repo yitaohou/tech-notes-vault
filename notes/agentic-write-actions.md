@@ -5,7 +5,7 @@ tags:
 - concept
 summary: agentic 系统中会对外部环境产生实际改变的动作，例如发送邮件、下单、发起转账，能大幅提升系统能力但也带来重大风险，需要格外谨慎并配备相应安全机制。
 created: '2026-08-26'
-updated: '2026-08-26'
+updated: '2026-09-03'
 ---
 
 # Agentic Write Actions
@@ -31,11 +31,17 @@ agentic 系统中会对外部环境产生实际改变的动作，例如发送邮
 - 以 CRM 系统为例，agent 的 write action 工具可以拉取或写入 deal pipeline 数据，或为内部团队创建、更新 tickets 来管理相关业务流程。（[18:05](https://youtu.be/CyLYY_xb5bQ?t=1085)）
 %% ytkb:end %%
 
+%% ytkb:video:WrwA7FYGPdQ %%
+### 来自 [[2026-09-02-deepseek-harness-开源-11-天爆-5-个漏洞ai-读网页电脑被控有人-api-额度]]
+- 测评方准备了8个模拟敏感工具，用注入指令诱导AI真正调用这些工具执行操作的攻击测试，成功率仅为2.5%。（[21:08](https://youtu.be/WrwA7FYGPdQ?t=1268)）
+%% ytkb:end %%
+
 ## 相关概念
 
 %% ytkb:related %%
 - [[agent-tools-power]]
 - [[coding-agent]]
+- [[information-extraction-attack]]
 - [[multi-agent-system]]
 - [[policy-check-gate-before-tool-call]]
 %% ytkb:end %%

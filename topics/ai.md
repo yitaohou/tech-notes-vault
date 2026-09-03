@@ -9,6 +9,7 @@ tags:
 %% ytkb:subtopics %%
 - [[ai-agent-architecture]]
 - [[ai-coding-agents]]
+- [[ai-continual-learning]]
 - [[ai-engineering-fundamentals]]
 - [[ai-evaluation]]
 - [[ai-fine-tuning]]

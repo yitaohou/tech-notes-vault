@@ -20,6 +20,14 @@ topics:
         - career-industry-ai-engineering-shift
         - ai-second-brain-tools
         title: AI 编码 Agent 与工作流
+      ai-continual-learning:
+        definition: ''
+        related:
+        - ai-fine-tuning
+        - ai-agent-architecture
+        - ai-training-data
+        - ai-self-improving-agents
+        title: ai-continual-learning
       ai-engineering-fundamentals:
         definition: training 与 inference 的区分、AI accelerator 芯片及模型编排（orchestrator）等
           AI engineering 基础概念。
