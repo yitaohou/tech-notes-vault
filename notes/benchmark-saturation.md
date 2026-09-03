@@ -5,7 +5,7 @@ tags:
 - concept
 summary: 指公开评估基准很快被模型刷到满分而失去区分度的现象，即基准饱和。
 created: '2026-08-26'
-updated: '2026-08-26'
+updated: '2026-09-03'
 ---
 
 # Benchmark Saturation
@@ -25,8 +25,15 @@ updated: '2026-08-26'
 - 公开评估基准很容易被饱和，即模型达到满分，昨天还很有挑战性的测试今天就变成了简单练习。（[09:01](https://youtu.be/JV3pL1_mn2M?t=541)）
 %% ytkb:end %%
 
+%% ytkb:video:Z-4AsgTYv2c %%
+### 来自 [[2026-09-02-claude-code-之父建議每六個月刪光你的-claudemd]]
+- Boris Cherny 提到，一份自建的 eval 大概只能活一到三个模型世代，因为模型进步太快，往往新 eval 出来没多久新模型就直接考满分，导致这份 eval 再也无法区分模型好坏，只能整份丢掉重新出题。（[09:39](https://youtu.be/Z-4AsgTYv2c?t=579)）
+%% ytkb:end %%
+
 ## 相关概念
 
 %% ytkb:related %%
 - [[capability-discovery-evaluation]]
+- [[eval-refresh-workflow]]
+- [[prompt-eval-not-permanent-assets]]
 %% ytkb:end %%

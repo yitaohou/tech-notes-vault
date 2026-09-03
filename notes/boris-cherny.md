@@ -5,7 +5,7 @@ tags:
 - concept
 summary: Anthropic旗下Claude Code的负责人，公开表示自己已很少手动为Claude写提示词，主要工作转向编写驱动Claude运转的自动循环。
 created: '2026-08-26'
-updated: '2026-08-26'
+updated: '2026-09-03'
 ---
 
 # Boris Cherny
@@ -26,9 +26,17 @@ Anthropic旗下Claude Code的负责人，公开表示自己已很少手动为Cla
 - Boris Cherny 的核心观点是：AI没有让编程工作变简单，而是改变了工程师创造价值的杠杆支点位置。（[18:06](https://youtu.be/KgiwIEBeOHw?t=1086)）
 %% ytkb:end %%
 
+%% ytkb:video:Z-4AsgTYv2c %%
+### 来自 [[2026-09-02-claude-code-之父建議每六個月刪光你的-claudemd]]
+- Boris Cherny 在一场访谈中提出反直觉建议：应该每六个月把自己的 CLAUDE.md、Skills 与 Hooks 全部删除重来。（[00:00](https://youtu.be/Z-4AsgTYv2c?t=0)）
+%% ytkb:end %%
+
 ## 相关概念
 
 %% ytkb:related %%
 - [[claude-code]]
+- [[claude-code-hooks-lifecycle]]
+- [[claude-md-file]]
+- [[claude-skills]]
 - [[loop-engineering]]
 %% ytkb:end %%
