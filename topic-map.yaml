@@ -472,6 +472,13 @@ topics:
         - system-design-architecture-fundamentals
         - system-design-communication-patterns
         title: 微服务与分布式架构模式
+      system-design-network-quality-testing:
+        definition: ''
+        related:
+        - DNS leak test
+        - VPN latency test
+        - network diagnostics
+        title: system-design-network-quality-testing
       system-design-networking:
         definition: DNS 域名解析、TCP/UDP 与 WebSocket 握手机制，及 F5/HAProxy 等硬件负载均衡器。
         related:
@@ -492,4 +499,12 @@ topics:
         - system-design-microservices-architecture
         - system-design-observability
         title: 可扩展性、可用性与容量规划
+      system-design-software-router-tools:
+        definition: ''
+        related:
+        - OpenWrt
+        - sing-box
+        - Clash
+        - Passwall
+        title: system-design-software-router-tools
     title: System Design
