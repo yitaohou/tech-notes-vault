@@ -5,7 +5,7 @@ tags:
 - concept
 summary: 利用 Git 的工作树（worktree）功能为每个并行运行的 Agent 创建独立工作目录与分支，从物理层面避免多 Agent 同时修改同一文件导致的冲突。
 created: '2026-08-26'
-updated: '2026-08-26'
+updated: '2026-09-17'
 ---
 
 # Git Worktree for Multi-Agent File Isolation
@@ -26,4 +26,18 @@ updated: '2026-08-26'
 - Git 的工作树功能可以创建一个独立工作目录并运行在单独分支上，但共享同一代码仓库的历史记录，使一个Agent的修改从物理层面碰不到另一个Agent的工作目录，从根源上避免文件冲突。（[06:03](https://youtu.be/KgiwIEBeOHw?t=363)）
 - Codex 把工作树支持直接内置到产品里，多个执行线程可以同时访问同一代码仓库而互相之间不会产生干扰。（[06:03](https://youtu.be/KgiwIEBeOHw?t=363)）
 - Claude Code 支持原生Git工作树功能，可以通过 --worktree 参数在独立代码副本里开启会话，也可以给子Agent设置工作树隔离配置，任务结束后自动清理工作目录。（[06:03](https://youtu.be/KgiwIEBeOHw?t=363)）
+%% ytkb:end %%
+
+%% ytkb:video:U6ZHJPNvlxU %%
+### 来自 [[2026-09-14-介绍-herdr-后评论区为什么都在推荐-orca]]
+- Orca 正是采用 Git worktree 机制为每个并行运行的 Agent 提供独立工作目录，这是其区别于普通多终端工具的核心技术基础。（[06:01](https://youtu.be/U6ZHJPNvlxU?t=361)）
+- 在 Orca 的项目视图中点击加号新建任务时，创建的并不是像 Codex 那样的新 Session，而是一个新的 Git Worktree，该 Worktree 是项目的独立副本，拥有自己的文件、分支和 Agent 会话，Orca 还会自动为其启动一个 Agent（如 Codex）。（[00:00](https://youtu.be/U6ZHJPNvlxU?t=0)）
+- 多个 Agent 同时工作时真正的核心问题并非窗口数量过多，而是它们可能在同一份代码上相互覆盖修改，导致最终无法分辨某处改动究竟出自哪个 Agent 还是用户本人，Orca 通过为每个任务分配独立 Worktree 来解决这一问题。（[00:00](https://youtu.be/U6ZHJPNvlxU?t=0)）
+%% ytkb:end %%
+
+## 相关概念
+
+%% ytkb:related %%
+- [[orca-unified-workspace]]
+- [[orca-workspace-redesign-philosophy]]
 %% ytkb:end %%
